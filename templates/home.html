@@ -10,7 +10,7 @@
         height: 380px;
         width: 100%;
         object-fit: cover;
-       
+
       }    
       nav{
         height : 80px
@@ -19,15 +19,17 @@
         font-weight:bold;
         font-family: cursive;
       }
-      .btn btn-outline-success{
-      background-color: blue;
+      p {
+        margin-top: 0; /* Remove top margin */
+        margin-bottom: 0; /* Remove bottom margin */
       }
+
     </style>
   </head>
     <body>
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand ">CareersAcademy</a>
+          <a class="navbar-brand " style="color:#0d6efd ">CareersAcademy</a>
           <form class="d-flex" role="search">
             <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-primary btn-sm" type="submit">Search</button>
@@ -36,16 +38,21 @@
       </nav>
       <div class="container">
              <h1 class="text-center mt-4 mb-4"> Careers Academy </h1>
-                <img class="img-fluid" id="banner" src="https://155007be-0798-4e9d-b1f5-48ba5b7b9fad-00-3rcnpjkp1bgde.sisko.replit.dev/static/binary_code.jpg"height="320"/>
+                <img class="img-fluid" id="banner" src="https://155007be-0798-4e9d-b1f5-48ba5b7b9fad-00-3rcnpjkp1bgde.sisko.replit.dev/static/pexels-fauxels-3183150.jpg"height="320"/>
                   <h2 class="text-center mt-3 mb-4" >About Careers Academy </h2>
                     <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo                            inventoreveritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed               quiaconsequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,                                      consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim                                  ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure                   reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
       <h2 class="text-center mt-2 mb-4" >Open Positions </h2>
-      <p>ToDo </p>
+      <div>
+<!-- {{JOBS}} Ths is the way in flask used to render dynamic data into the website but it need to be templatte_rendered in app.py--> 
+        {% for JOB in JOBS %}
+            {% include 'jobItem.html' %}
+        {% endfor %}
+      </div>
         <div class="text-center">
-          <button class="text-center btn btn-primary btn-lg mb-2" >Contact Us </button>
+          <button class="text-center btn btn-primary btn-lg mt-5 mb-2" >Contact Us </button>
           <p class="mb-4 mt-1">&copy;  2024 Careers Academy. All rights reserved.</p>
         </div>
       </div>
     </body>
- 
+
 </html>    
