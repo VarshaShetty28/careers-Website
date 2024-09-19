@@ -34,6 +34,6 @@ def carrers_web():
 #In json endpoint
 @app.route("/api/jobs")
 def list_jobs():
-  return jsonify(Jobs) #json is just js objects ,rest API,json Api,Api end point means web server returning some info not just as html verson can also retutrn in the  or of json if we put / with the router name given here its jobs
+  return jsonify(Jobs) #json is just js objects ,rest API,json Api,Api end point means web server returning some info not just as html verson can also retutrn in the  form of json data and  if we put / with the router name given here its jobs
 if __name__=='__main__':
   app.run(host="0.0.0.0",debug=True)
