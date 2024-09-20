@@ -11,34 +11,35 @@
             width: 100%;
             object-fit: cover;
         }
-
+    
         nav {
             background-color: #3e2c1e; 
             height: 80px; 
         }
-
+    
         .navbar-brand {
             color: #0d6efd; 
         }
-
+    
         a {
             font-weight: bold; 
             font-family: cursive;
         }
-
+    
         p {
-            margin-top: 0; /* Remove top margin for paragraphs */
-            margin-bottom: 0; /* Remove bottom margin for paragraphs */
-            line-height: 1.6; /* Set line height for paragraphs */
+            margin-top: 0; 
+            margin-bottom: 0; 
+            line-height: 1.6; 
         }
-
+    
         img {
             border-radius: 4px; 
         }
-
+    
         .btn-primary {
             font-size: 1rem;
-    </style>
+        }
+    </style>    
 </head>
 <body>
     {% include 'navbar.html' %}
@@ -64,10 +65,10 @@
             {% endfor %}
         </div>
         <div class="text-center">
-            <button class="text-center btn btn-primary btn-lg mt-5 mb-2">Contact Us</button>
+            <a href="mailto:hello@careersAcademy.com?subject=Question%20About%20Job%20Openings&body=My%20name%20%3A%20%3CYour%20Name%3E%0D%0AMy%20Questions%20%3A%20%3C%20enter%20question%20here%20%3E" class="text-center btn btn-primary btn-lg mt-5 mb-2">Contact Us</a>
             <p class="mb-4 mt-1">&copy; 2024 Careers Academy. All rights reserved.</p>
         </div>
     </div>
     {% include 'footer.html' %}
-</body>
+    </body>
 </html>
